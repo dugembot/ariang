@@ -6,11 +6,11 @@ WORKDIR /app
 
 ENV RPC_SECRET=""
 ENV ENABLE_AUTH=false
-ENV DOMAIN=0.0.0.0:88
+ENV DOMAIN=0.0.0.0:8088
 ENV ARIA2_USER=user
 ENV ARIA2_PWD=password
 ENV ARIA2_SSL=false
-ENV ARIA2_EXTERNAL_PORT=88
+ENV ARIA2_EXTERNAL_PORT=8088
 ENV CADDYPATH=/app
 ENV RCLONE_CONFIG=/app/conf/rclone.conf
 
@@ -54,7 +54,7 @@ RUN apk update \
 
 
 
-EXPOSE 88
+EXPOSE 8088
 
 HEALTHCHECK --interval=1m --timeout=3s \
   CMD curl -f http://localhost || exit 1
