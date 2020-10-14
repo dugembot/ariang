@@ -59,7 +59,7 @@ RUN adduser -D -u 1000 junv \
 
 
 
-EXPOSE 88 443
+EXPOSE 88
 
 HEALTHCHECK --interval=1m --timeout=3s \
   CMD curl -f http://localhost || exit 1
