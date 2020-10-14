@@ -41,8 +41,6 @@ RUN apk update \
   && unzip rclone-*.zip \
   && cd rclone-*-linux-amd64 \
   && cp rclone /usr/local/bin/ \
-  && chown junv:junv /usr/local/bin/rclone \
-  && chmod 755 /usr/local/bin/rclone \
   && rm /app/rclone-*.zip \
   && rm -rf /app/rclone-* \
   && mkdir /usr/local/www/aria2/Download \
