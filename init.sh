@@ -1,15 +1,5 @@
 #! /bin/bash -eu
 
-echo "**** update uid and gid to ${PUID}:${PGID} ****"
-groupmod -o -g "$PGID" junv
-usermod -o -u "$PUID" junv
-
-chown -R junv:junv \
-         /app \
-         /usr/local \
-         /var/log \
-         /data
-
 chmod +x /app/caddy.sh \
          /app/rclone.sh \
          /app/aria2c.sh
