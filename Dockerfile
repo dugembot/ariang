@@ -20,8 +20,7 @@ ADD aria2c.sh caddy.sh Procfile init.sh start.sh rclone.sh /app/
 ADD conf /app/conf
 ADD Caddyfile SecureCaddyfile /usr/local/caddy/
 
-RUN adduser -D -u 1000 junv \
-  && apk update \
+RUN apk update \
   && apk add runit shadow wget bash curl openrc gnupg aria2 tar mailcap --no-cache \
   && caddy_tag=v1.0.4 \
   && wget -N https://github.com/caddyserver/caddy/releases/download/${caddy_tag}/caddy_${caddy_tag}_linux_amd64.tar.gz \
