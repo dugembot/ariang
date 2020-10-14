@@ -57,13 +57,9 @@ RUN adduser -D -u 1000 junv \
   && rm -rf AriaNg-${version}.zip \
   && chmod -R 755 /usr/local/www/aria2
 
-# folder for storing ssl keys
-VOLUME /app/conf/key
 
-# file downloading folder
-VOLUME /data
 
-EXPOSE 80 443
+EXPOSE 88 443
 
 HEALTHCHECK --interval=1m --timeout=3s \
   CMD curl -f http://localhost || exit 1
